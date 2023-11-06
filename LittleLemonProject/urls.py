@@ -18,5 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('restaurant/', include('restaurant.urls'))  # Strings are now properly quoted
+    path('restaurant/', include('restaurant.urls')),  # Strings are now properly quoted
+    path('restaurant/menu/', include('restaurant.urls')),
 ]
+
