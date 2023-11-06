@@ -1,17 +1,18 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .models import MenuItem
+from rest_framework.decorators import api_view
+from .models import Menu
 from .serializers import MenuSerializer
 
 # Create your views here.
 def index(request):
     return render(request, 'index.html', {})
 
-class MenuItemView(rest_framework.generics.ListCreateView):
-    queryset = MenuItem.objects.all()
+class MenuItemsView(generics.ListCreateAPIView):
+    queryset = Menu.objects.all()
     serializer_class = MenuSerializer
     
-class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = MenuItem.objects.all()
+class SingleMenuItemView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView):
+    queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
