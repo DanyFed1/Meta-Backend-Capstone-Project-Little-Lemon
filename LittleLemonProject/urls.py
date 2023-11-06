@@ -21,17 +21,9 @@ from restaurant.views import BookingViewSet, SingleMenuItemView, MenuItemsView
 router = DefaultRouter()
 router.register(r'booking/tables', BookingViewSet)
 
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-#     path('restaurant/', include('restaurant.urls')),  
-#     path('restaurant/menu/', include('restaurant.urls')),
-#     path('restaurant/booking/', include(router.urls)),
-# ]
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('restaurant/menu/', include('restaurant.urls')),
+    path('restaurant/', include('restaurant.urls')),
     path('restaurant/', include(router.urls)),
     # Do not repeat the 'restaurant/' prefix or include 'restaurant.urls' here
     # since it's handled by the router above for the booking tables.
