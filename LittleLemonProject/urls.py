@@ -25,7 +25,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('restaurant/', include('restaurant.urls')),
     path('restaurant/', include(router.urls)),
-    # Do not repeat the 'restaurant/' prefix or include 'restaurant.urls' here
-    # since it's handled by the router above for the booking tables.
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken'))
 ]
 
+#To check auth users using djoser first need to login as superuser and then then
+#go to http://127.0.0.1:8000/auth/users/
+#to register new user go to  http://127.0.0.1:8000/auth/users/
+#To login, visit the djoser generated URL http://127.0.0.1:8000/auth/token/login/
