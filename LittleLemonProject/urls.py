@@ -35,3 +35,4 @@ urlpatterns = [
 #To login, visit the djoser generated URL http://127.0.0.1:8000/auth/token/login/
 #To Logout, enter the URL http://127.0.0.1:8000/auth/token/logout/  with a POST method to logout the user.
 # to access the post request for booking actually need to use http://127.0.0.1:8000/restaurant/api-token-auth/
+#after the modification the booking via 127.0.0.1:8000/restaurant/booking/tables/ is now available only for authentificated users for which tokens where generated
