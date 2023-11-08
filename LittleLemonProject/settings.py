@@ -80,9 +80,9 @@ WSGI_APPLICATION = "LittleLemonProject.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 #Settings.py 
-#superuser: daniilfjodorov
-#mail: dfed@littlelemon.com
-#password: testuser
+#superuser:  lorenzop
+#mail:  lorenzop@klittlelemon.com
+#password:  testuser1
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
