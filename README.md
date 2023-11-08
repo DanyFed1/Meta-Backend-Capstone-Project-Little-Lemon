@@ -11,4 +11,4 @@ Some characteristics for porject requriements according to syllabus:
 7. Implemented the TokenAutentication feature of Django REST framework to secure table booking API.
 8. Designed simple unit tests.
 
-
+For peer reviews: readme.txt is inside LittleLemonProject dir
